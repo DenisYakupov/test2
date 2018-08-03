@@ -10,14 +10,13 @@
 	<div id="result"></div>
 	<script>
 
-		var text = document.getElementById('text'); // создание объекта элемента по ID text
-		var reg = /\)\)*\)/g; // Шаблон для замены в строке, скобки экранированы обратным слешем, * - количество введенных скобок неограничено,  g - флаг для замены всех совпадений в строке
+		var text = document.getElementById('text'); 
+		var reg = /\)\)*\)/g; 
 
-		text.oninput = function() { // oninput - событие срабатывает при изменении значения текстового элемента
+		text.oninput = function() { 
 			document.getElementById('result').innerHTML = text.value.replace(reg, ":)");
 		};
 
-		// innerHTML - Полностью заменяет собой содержимое элемента, на то что ему передают, в данном случае передается строка ввода, которая изменяется с помощью регулярного выражения
 
 	</script>
 </body>
