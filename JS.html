@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<textarea name="" id="text" cols="30" rows="10"></textarea>
+	<div id="result"></div>
+	<script>
+
+		var text = document.getElementById('text'); // создание объекта элемента по ID text
+		var reg = /\)\)*\)/g; // Шаблон для замены в строке, скобки экранированы обратным слешем, * - количество введенных скобок неограничено,  g - флаг для замены всех совпадений в строке
+
+		text.oninput = function() { // oninput - событие срабатывает при изменении значения текстового элемента
+			document.getElementById('result').innerHTML = text.value.replace(reg, ":)");
+		};
+
+		// innerHTML - Полностью заменяет собой содержимое элемента, на то что ему передают, в данном случае передается строка ввода, которая изменяется с помощью регулярного выражения
+
+	</script>
+</body>
+</html>
